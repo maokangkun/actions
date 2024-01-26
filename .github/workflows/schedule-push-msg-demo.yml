@@ -2,7 +2,7 @@ name: Schedule Actions Demo
 run-name: ${{ github.actor }} is testing out Schedule Actions 🚀
 on:
   schedule:
-    - cron: "5,10,15,20 * * * *"
+    - cron: "*/5 * * * *"
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
