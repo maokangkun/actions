@@ -1,0 +1,17 @@
+name: Schedule Actions Demo
+run-name: ${{ github.actor }} is testing out Schedule Actions 🚀
+on:
+  schedule:
+    - cron: "5,10,15,20 * * * *"
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Push msg
+        run: |
+          uid="ozCgXAen6CwTabCZRPJfRQ"
+          title="GithubAction"
+          msg="test"
+          icon="?icon=https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png"
+          group="&group=GithubAction"
+          curl https://api.day.app/$uid/$title/$msg$icon$group
